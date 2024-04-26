@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c62ac5-7377-4cf2-9ce6-dd8c7a4a8c5f" name="Changes" comment="Insert forms">
-      <change afterPath="$PROJECT_DIR$/read.py" afterDir="false" />
+    <list default="true" id="72c62ac5-7377-4cf2-9ce6-dd8c7a4a8c5f" name="Changes" comment="excells">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inter/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/inter/MainWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/planesInversion.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/planesInversion.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inter/planesInversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/inter/planesInversion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,20 +22,17 @@
     </option>
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Kelunie"
-  }
+  "lastFilter": {}
 }]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="97b686ed-e0bc-44c4-bb5d-aa9a3ed10ef2" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Kelunie/ProyectoPython.git",
-    "accountId": "b1e21dda-7da4-4a6d-a16a-5ce733191698"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kelunie/ProyectoPython.git&quot;,
+    &quot;accountId&quot;: &quot;b1e21dda-7da4-4a6d-a16a-5ce733191698&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -59,6 +54,7 @@
     "Python.read.executor": "Run",
     "Python.try.executor": "Run",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Julio/Documents/proyecto/Proyecto",
     "settings.editor.selected.configurable": "preferences.toDoOptions"
   }
 }]]></component>
@@ -205,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714135009595</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="excells">
+      <option name="closed" value="true" />
+      <created>1714152378106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714152378106</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +252,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Insert forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Insert forms" />
+    <MESSAGE value="excells" />
+    <option name="LAST_COMMIT_MESSAGE" value="excells" />
   </component>
 </project>

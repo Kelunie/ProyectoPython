@@ -119,7 +119,7 @@ class Ui_planInversion(QWidget):
         ___qtablewidgetitem4 = self.table1.verticalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("planInversion", u"Descripci\u00f3n del Proyecto", None));
         ___qtablewidgetitem5 = self.table2.horizontalHeaderItem(0)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("planInversion", u"Proveedor", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("planInversion", u"Detalle", None));
         ___qtablewidgetitem6 = self.table2.horizontalHeaderItem(1)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("planInversion", u"Proveedor", None));
         ___qtablewidgetitem7 = self.table2.horizontalHeaderItem(2)

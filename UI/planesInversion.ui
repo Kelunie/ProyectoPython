@@ -137,7 +137,7 @@
    </attribute>
    <column>
     <property name="text">
-     <string>Proveedor</string>
+     <string>Detalle</string>
     </property>
    </column>
    <column>

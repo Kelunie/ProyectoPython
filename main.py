@@ -7,12 +7,14 @@ from PySide6.QtGui import Qt
 from datetime import datetime, date
 from Conexion import ConexionMySQL
 import mysql.connector
+from openpyxl import load_workbook
 
 # import guis and libraries
 from inter.MainWindow import Ui_MainWindow
 from inter.juntas import *
 from inter.instituciones import *
 from inter.Hogar import *
+from inter.planesInversion import *
 
 
 # Mysql
@@ -148,6 +150,7 @@ class MainWindow(QMainWindow):
         self.subRJuntas = QMdiSubWindow()
         self.subRInstituciones = QMdiSubWindow()
         self.subRHogares = QMdiSubWindow()
+        self.subPlanesInversion = QMdiSubWindow()
 
         self.initMenu()
 
@@ -209,6 +212,9 @@ class MainWindow(QMainWindow):
     def cerrarRHogares(self):
         self.RHogares.close()
         self.subRHogares.hide()
+    def cerrarPlanesIinversion(self):
+        self.APlanesInversion.close()
+        self.subPlanesInversion.hide()
 
     def abrirInstituciones(self):
         self.RInstituciones = Ui_instituciones()
@@ -307,6 +313,121 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Error", f"Error al ingresar los datos: {str(e)}")
 
     def abrirPlanesInversion(self):
+        self.APlanesInversion = Ui_planInversion()
+        self.subPlanesInversion.setWidget(self.APlanesInversion)
+        self.subPlanesInversion.setAttribute(Qt.WA_DeleteOnClose, False)
+        self.ndi.addSubWindow(self.subPlanesInversion)
+        self.APlanesInversion.btncloose.clicked.connect(self.cerrarPlanesIinversion)
+        self.subPlanesInversion.setFixedSize(self.APlanesInversion.size())
+
+        self.subPlanesInversion.show()
+        self.APlanesInversion.btnopen.clicked.connect(self.abrir_archivo)
+        self.APlanesInversion.btnload.clicked.connect(self.cargar_archivo)
+
+    def abrir_archivo(self):
+        file = QFileDialog.getOpenFileName(self, "Abrir Archivo Excel", "", "Excel files (*.xlsx) ;; All Files(*)")
+        self.direccion = file[0]
+
+    def cargar_archivo(self):
+        try:
+            # Verificar si se seleccionó un archivo
+            if not self.direccion:
+                QMessageBox.warning(self, "Advertencia", "No se seleccionó ningún archivo.")
+                return
+
+            # Cargar el libro de trabajo Excel
+            libro_excel = load_workbook(self.direccion)
+
+            # Leer la primera hoja de trabajo
+            hoja = libro_excel.active
+
+            # Leer datos de la hoja de trabajo
+            datos = []
+
+            total = 0
+
+            # Leer filas y columnas
+            for fila in hoja.iter_rows(values_only=True):
+                fila_datos = []
+                for valor in fila:
+                    if valor is not None:  # Verificar si el valor no es None
+                        fila_datos.append(valor)
+                if fila_datos:  # Agregar solo si la fila contiene datos
+                    datos.append(fila_datos)
+
+            # add fields data
+            self.APlanesInversion.insMuni.setText(datos[0][0])
+            self.APlanesInversion.insSoli.setText(datos[1][0])
+            self.APlanesInversion.insLey.setText(datos[2][0])
+            # Agregar datos a la tabla table1
+            self.APlanesInversion.table1.setItem(0, 0, QTableWidgetItem(datos[3][1]))
+            self.APlanesInversion.table1.setItem(1, 0, QTableWidgetItem(datos[4][1]))
+            self.APlanesInversion.table1.setItem(2, 0, QTableWidgetItem(datos[5][1]))
+            self.APlanesInversion.table1.setItem(3, 0, QTableWidgetItem(datos[6][1]))
+            self.APlanesInversion.table1.setItem(4, 0, QTableWidgetItem(datos[7][1]))
+
+            # Agregar datos a la tabla table2
+            self.APlanesInversion.table2.insertRow(0)
+            for i in range(len(datos[9])):
+                item = QTableWidgetItem(str(datos[9][i]))
+                self.APlanesInversion.table2.setItem(0, i, item)
+                if i == 5:
+                    cant = int(datos[9][3])
+                    PUni = int(datos[9][4])
+                    subtotal = cant * PUni
+                    total += subtotal
+                    subtotal_item = QTableWidgetItem(str(subtotal))
+                    self.APlanesInversion.table2.setItem(0, 5, subtotal_item)
+
+            self.APlanesInversion.table2.insertRow(1)
+            for i in range(len(datos[10])):
+                item = QTableWidgetItem(str(datos[10][i]))
+                self.APlanesInversion.table2.setItem(1, i, item)
+                if i == 5:
+                    cant = int(datos[10][3])
+                    PUni = int(datos[10][4])
+                    subtotal = cant * PUni
+                    total += subtotal
+                    subtotal_item = QTableWidgetItem(str(subtotal))
+                    self.APlanesInversion.table2.setItem(1, 5, subtotal_item)
+
+            self.APlanesInversion.table2.insertRow(2)
+            for i in range(len(datos[11])):
+                item = QTableWidgetItem(str(datos[11][i]))
+                self.APlanesInversion.table2.setItem(2, i, item)
+                if i == 5:
+                    cant = int(datos[11][3])
+                    PUni = int(datos[11][4])
+                    subtotal = cant * PUni
+                    total += subtotal
+                    subtotal_item = QTableWidgetItem(str(subtotal))
+                    self.APlanesInversion.table2.setItem(2, 5, subtotal_item)
+
+            self.APlanesInversion.table2.insertRow(3)  # Agregar una nueva fila en el índice 3 (cuarta fila)
+            for i in range(len(datos[12])):
+                item = QTableWidgetItem(str(datos[12][i]))
+                self.APlanesInversion.table2.setItem(3, i,
+                                                     item)  # Agregar los elementos de datos[12] en la cuarta fila de table2
+                if i == 5:
+                    cant = int(datos[12][3])
+                    PUni = int(datos[12][4])
+                    subtotal = cant * PUni
+                    total += subtotal
+                    subtotal_item = QTableWidgetItem(str(subtotal))
+                    self.APlanesInversion.table2.setItem(3, 5,
+                                                         subtotal_item)  # Agregar el subtotal en la cuarta fila, columna 5
+
+            total_str = str(total)
+            self.APlanesInversion.instotal.setText(total_str)
+
+            # Ajustar el tamaño de las columnas de table1
+            for columna in range(self.APlanesInversion.table1.columnCount()):
+                self.APlanesInversion.table1.resizeColumnToContents(columna)
+
+            QMessageBox.information(self, "Información", "Archivo Excel cargado correctamente.")
+
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Error al cargar el archivo Excel: {str(e)}")
 
     def abrirInformeLiquidacion(self):
         # Lógica para abrir la ventana de Informe de Liquidación

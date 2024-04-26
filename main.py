@@ -307,8 +307,6 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Error", f"Error al ingresar los datos: {str(e)}")
 
     def abrirPlanesInversion(self):
-        # Lógica para abrir la ventana de Planes de Inversión
-        pass
 
     def abrirInformeLiquidacion(self):
         # Lógica para abrir la ventana de Informe de Liquidación

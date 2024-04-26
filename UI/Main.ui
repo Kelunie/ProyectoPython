@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Proyecto</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuRegistros">
+    <property name="title">
+     <string>Registros</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionJuntas"/>
+    <addaction name="separator"/>
+    <addaction name="actionInstituciones"/>
+    <addaction name="separator"/>
+    <addaction name="actionHogares"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuExcells">
+    <property name="title">
+     <string>Excells</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionPlanes_Inversi_n"/>
+    <addaction name="separator"/>
+    <addaction name="actionInforme_Liquidaci_n"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuSalir">
+    <property name="title">
+     <string>Salir</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuRegistros"/>
+   <addaction name="menuExcells"/>
+   <addaction name="menuSalir"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionJuntas">
+   <property name="text">
+    <string>Juntas</string>
+   </property>
+  </action>
+  <action name="actionInstituciones">
+   <property name="text">
+    <string>Instituciones</string>
+   </property>
+  </action>
+  <action name="actionHogares">
+   <property name="text">
+    <string>Hogares</string>
+   </property>
+  </action>
+  <action name="actionPlanes_Inversi_n">
+   <property name="text">
+    <string>Planes Inversión</string>
+   </property>
+  </action>
+  <action name="actionInforme_Liquidaci_n">
+   <property name="text">
+    <string>Informe Liquidación</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

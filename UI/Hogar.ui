@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Hogar</class>
+ <widget class="QWidget" name="Hogar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>889</width>
+    <height>895</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Ingresar Hogares</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Personería Jurídica</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QLabel" name="label_2">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Tiempo de Vigencia</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4" colspan="3">
+    <widget class="QLabel" name="label_3">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Distrito</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QLabel" name="label_4">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Ubicación</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="insPJ"/>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="insTV"/>
+   </item>
+   <item row="1" column="3" colspan="4">
+    <widget class="QLineEdit" name="insdis"/>
+   </item>
+   <item row="1" column="7">
+    <widget class="QLineEdit" name="insubi"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Telefono</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QLabel" name="label_6">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Correo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3" colspan="3">
+    <widget class="QLabel" name="label_7">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Tipo de Centro</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="6" colspan="2">
+    <widget class="QLabel" name="label_8">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Valoración de Puntos</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLineEdit" name="instel"/>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QLineEdit" name="inscorreo"/>
+   </item>
+   <item row="3" column="3" colspan="3">
+    <widget class="QLineEdit" name="insTC"/>
+   </item>
+   <item row="3" column="6" colspan="2">
+    <widget class="QLineEdit" name="insVP"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_17">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Nombre</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2">
+    <widget class="QLabel" name="label_9">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Horario de Atención</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3" colspan="3">
+    <widget class="QLabel" name="label_10">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Población Anual</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="6" colspan="2">
+    <widget class="QLabel" name="label_11">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Fecha de Entrega del Plan</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLineEdit" name="insnomb"/>
+   </item>
+   <item row="5" column="1" colspan="2">
+    <widget class="QLineEdit" name="insHA"/>
+   </item>
+   <item row="5" column="4" colspan="2">
+    <widget class="QLineEdit" name="insPA"/>
+   </item>
+   <item row="5" column="6" colspan="2">
+    <widget class="QLineEdit" name="insFEP"/>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QLabel" name="label_12">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Fecha de Presentacion del Informe</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="3">
+    <widget class="QLabel" name="label_13">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Presidente</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="5" colspan="3">
+    <widget class="QLabel" name="label_14">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Tesorero</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QLineEdit" name="insFPI"/>
+   </item>
+   <item row="7" column="2" colspan="3">
+    <widget class="QLineEdit" name="inspresi"/>
+   </item>
+   <item row="7" column="5" colspan="3">
+    <widget class="QLineEdit" name="insteso"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_15">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Banco</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1" colspan="3">
+    <widget class="QLabel" name="label_16">
+     <property name="frameShape">
+      <enum>QFrame::Shape::Box</enum>
+     </property>
+     <property name="text">
+      <string>Cuenta Corriente</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLineEdit" name="insbanco"/>
+   </item>
+   <item row="9" column="1" colspan="3">
+    <widget class="QLineEdit" name="insCC"/>
+   </item>
+   <item row="10" column="1" colspan="2">
+    <widget class="QPushButton" name="btncancelar">
+     <property name="text">
+      <string>Cancelar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="5" colspan="3">
+    <widget class="QPushButton" name="btningresar">
+     <property name="text">
+      <string>ingresar Datos</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>insPJ</tabstop>
+  <tabstop>insTV</tabstop>
+  <tabstop>insdis</tabstop>
+  <tabstop>insubi</tabstop>
+  <tabstop>instel</tabstop>
+  <tabstop>inscorreo</tabstop>
+  <tabstop>insTC</tabstop>
+  <tabstop>insVP</tabstop>
+  <tabstop>insnomb</tabstop>
+  <tabstop>insHA</tabstop>
+  <tabstop>insPA</tabstop>
+  <tabstop>insFEP</tabstop>
+  <tabstop>insFPI</tabstop>
+  <tabstop>inspresi</tabstop>
+  <tabstop>insteso</tabstop>
+  <tabstop>insbanco</tabstop>
+  <tabstop>insCC</tabstop>
+  <tabstop>btningresar</tabstop>
+  <tabstop>btncancelar</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
